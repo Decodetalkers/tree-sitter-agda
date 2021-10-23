@@ -1,5 +1,20 @@
 [
   {
+    "type": "SetN",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "qid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "abstract",
     "named": true,
     "fields": {},
@@ -29,6 +44,10 @@
         },
         {
           "type": "generalize",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -106,6 +125,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "ELLIPSIS",
+          "named": true
+        },
         {
           "type": "PropN",
           "named": true
@@ -227,6 +250,10 @@
         },
         {
           "type": "generalize",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -383,6 +410,10 @@
       "required": false,
       "types": [
         {
+          "type": "ARROW",
+          "named": true
+        },
+        {
           "type": "atom",
           "named": true
         },
@@ -463,6 +494,14 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "ARROW",
+          "named": true
+        },
+        {
+          "type": "FORALL",
+          "named": true
+        },
         {
           "type": "expr",
           "named": true
@@ -568,6 +607,14 @@
       "required": true,
       "types": [
         {
+          "type": "ARROW",
+          "named": true
+        },
+        {
+          "type": "LAMBDA",
+          "named": true
+        },
+        {
           "type": "bid",
           "named": true
         },
@@ -588,6 +635,21 @@
       "types": [
         {
           "type": "hole_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "module_name",
           "named": true
         }
       ]
@@ -661,6 +723,10 @@
         },
         {
           "type": "generalize",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -741,8 +807,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "ARROW",
+          "named": true
+        },
+        {
+          "type": "LAMBDA",
+          "named": true
+        },
         {
           "type": "expr",
           "named": true
@@ -774,6 +848,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "ARROW",
+          "named": true
+        },
         {
           "type": "atom",
           "named": true
@@ -866,6 +944,10 @@
         },
         {
           "type": "generalize",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -1024,6 +1106,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -1123,6 +1209,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -1209,6 +1299,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "ELLIPSIS",
+          "named": true
+        },
         {
           "type": "atom",
           "named": true
@@ -1312,6 +1406,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -1391,6 +1489,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "import_directive",
           "named": true
         },
@@ -1458,6 +1560,10 @@
         },
         {
           "type": "generalize",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -1575,6 +1681,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -1686,6 +1796,10 @@
       "required": false,
       "types": [
         {
+          "type": "ELLIPSIS",
+          "named": true
+        },
+        {
           "type": "PropN",
           "named": true
         },
@@ -1791,6 +1905,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -1891,6 +2009,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "ELLIPSIS",
+          "named": true
+        },
         {
           "type": "PropN",
           "named": true
@@ -2082,6 +2204,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -2156,6 +2282,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "ARROW",
+          "named": true
+        },
         {
           "type": "atom",
           "named": true
@@ -2287,6 +2417,10 @@
         },
         {
           "type": "id",
+          "named": true
+        },
+        {
+          "type": "import",
           "named": true
         },
         {
@@ -2475,6 +2609,10 @@
           "named": true
         },
         {
+          "type": "import",
+          "named": true
+        },
+        {
           "type": "infix",
           "named": true
         },
@@ -2601,8 +2739,24 @@
     "named": false
   },
   {
+    "type": "ARROW",
+    "named": true
+  },
+  {
     "type": "CATCHALL",
     "named": false
+  },
+  {
+    "type": "ELLIPSIS",
+    "named": true
+  },
+  {
+    "type": "FORALL",
+    "named": true
+  },
+  {
+    "type": "LAMBDA",
+    "named": true
   },
   {
     "type": "Prop",
@@ -2617,8 +2771,8 @@
     "named": false
   },
   {
-    "type": "SetN",
-    "named": true
+    "type": "Set ",
+    "named": false
   },
   {
     "type": "_",
@@ -2639,6 +2793,10 @@
   {
     "type": "coinductive",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   },
   {
     "type": "constructor",

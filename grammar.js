@@ -649,12 +649,11 @@ module.exports = grammar({
         _atom_no_curly: $ => choice(
             '_',
             'Prop',
-            'Set',
+            $.SetN,
             'quote',
             'quoteTerm',
             'quoteContext',
             'unquote',
-            $.SetN,
             $.PropN,
             brace_double($.expr),
             idiom($.expr),
@@ -905,7 +904,7 @@ module.exports = grammar({
         )),
 
         // setN
-        SetN: $ => seq(choice(seq('Set ', $.qid))),
+        SetN: $ => prec.right(2, seq('Set', optional($.atom))),
 
 
         ////////////////////////////////////////////////////////////////////////

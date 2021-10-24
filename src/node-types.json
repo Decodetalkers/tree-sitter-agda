@@ -5,10 +5,10 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "qid",
+          "type": "atom",
           "named": true
         }
       ]
@@ -2768,10 +2768,6 @@
   },
   {
     "type": "Set",
-    "named": false
-  },
-  {
-    "type": "Set ",
     "named": false
   },
   {

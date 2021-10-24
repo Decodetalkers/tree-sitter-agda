@@ -3123,8 +3123,8 @@
           "value": "Prop"
         },
         {
-          "type": "STRING",
-          "value": "Set"
+          "type": "SYMBOL",
+          "name": "SetN"
         },
         {
           "type": "STRING",
@@ -3141,10 +3141,6 @@
         {
           "type": "STRING",
           "value": "unquote"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "SetN"
         },
         {
           "type": "SYMBOL",
@@ -5282,27 +5278,29 @@
       }
     },
     "SetN": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "Set "
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "qid"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "type": "PREC_RIGHT",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "Set"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "atom"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
     "PropN": {
       "type": "STRING",

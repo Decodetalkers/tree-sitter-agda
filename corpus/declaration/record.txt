@@ -1,30 +1,38 @@
-==================
+================================================================================
 Directives only
-==================
+================================================================================
 
 record Pair (A B : Set) : Set where
     constructor _,_
     inductive
     eta-equality
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (record
-        (record_name (qid))
-        (typed_binding
-            (atom (qid))
-            (atom (qid))
-            (expr (atom)))
-        (expr (atom))
-        (record_declarations_block
-            (record_constructor (id))
-            (record_induction)
-            (record_eta))))
+  (record
+    (record_name
+      (qid))
+    (typed_binding
+      (atom
+        (qid))
+      (atom
+        (qid))
+      (expr
+        (atom
+          (SetN))))
+    (expr
+      (atom
+        (SetN)))
+    (record_declarations_block
+      (record_constructor
+        (id))
+      (record_induction)
+      (record_eta))))
 
-==================
+================================================================================
 Directives with declarations I
-==================
+================================================================================
 
 record Pair (A B : Set) : Set where
     constructor _,_
@@ -36,31 +44,53 @@ record Pair (A B : Set) : Set where
         fst : A
         snd : B
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (record
-        (record_name (qid))
-        (typed_binding
-            (atom (qid))
-            (atom (qid))
-            (expr (atom)))
-        (expr (atom))
-        (record_declarations_block
-            (record_constructor (id))
-            (record_induction)
-            (record_eta)
-            (instance
-                (function
-                    (lhs (function_name (atom (qid))))
-                    (rhs (expr (atom (qid))))))
-            (fields
-                (signature (field_name) (expr (atom (qid))))
-                (signature (field_name) (expr (atom (qid))))))))
+  (record
+    (record_name
+      (qid))
+    (typed_binding
+      (atom
+        (qid))
+      (atom
+        (qid))
+      (expr
+        (atom
+          (SetN))))
+    (expr
+      (atom
+        (SetN)))
+    (record_declarations_block
+      (record_constructor
+        (id))
+      (record_induction)
+      (record_eta)
+      (instance
+        (function
+          (lhs
+            (function_name
+              (atom
+                (qid))))
+          (rhs
+            (expr
+              (atom
+                (qid))))))
+      (fields
+        (signature
+          (field_name)
+          (expr
+            (atom
+              (qid))))
+        (signature
+          (field_name)
+          (expr
+            (atom
+              (qid))))))))
 
-==================
+================================================================================
 Directives with declarations II
-==================
+================================================================================
 
 record Pair (A B : Set) : Set where
     -- part of the directives
@@ -70,22 +100,35 @@ record Pair (A B : Set) : Set where
     instance
         a = b
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (record
-        (record_name (qid))
-        (typed_binding
-            (atom (qid))
-            (atom (qid))
-            (expr (atom)))
-        (expr (atom))
-        (record_declarations_block
-            (comment)
-            (record_constructor_instance
-              (record_constructor (id)))
-            (comment)
-            (instance
-                (function
-                    (lhs (atom (qid)))
-                    (rhs (expr (atom (qid)))))))))
+  (record
+    (record_name
+      (qid))
+    (typed_binding
+      (atom
+        (qid))
+      (atom
+        (qid))
+      (expr
+        (atom
+          (SetN))))
+    (expr
+      (atom
+        (SetN)))
+    (record_declarations_block
+      (comment)
+      (record_constructor_instance
+        (record_constructor
+          (id)))
+      (comment)
+      (instance
+        (function
+          (lhs
+            (atom
+              (qid)))
+          (rhs
+            (expr
+              (atom
+                (qid)))))))))

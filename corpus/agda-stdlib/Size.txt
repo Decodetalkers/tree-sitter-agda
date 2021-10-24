@@ -1,6 +1,6 @@
-==================
+================================================================================
 open import
-==================
+================================================================================
 
 module Size where
 
@@ -11,15 +11,29 @@ open import Agda.Builtin.Size public
            ; ↑_ )                --  ↑_     : Size → Size
   renaming ( ω to ∞ )           --  ∞      : Size
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (module (module_name))
-    (open (module_name)
-        (import_directive)
-        (import_directive (renaming (id) (id)))
-        (comment)
-        (import_directive (id) (comment) (id) (comment) (id))
-        (comment)
-        (import_directive (renaming (id) (id))))
-        (comment))
+  (module
+    (module_name))
+  (open
+    (import
+      (module_name))
+    (import_directive)
+    (import_directive
+      (renaming
+        (id)
+        (id)))
+    (comment)
+    (import_directive
+      (id)
+      (comment)
+      (id)
+      (comment)
+      (id))
+    (comment)
+    (import_directive
+      (renaming
+        (id)
+        (id))))
+  (comment))

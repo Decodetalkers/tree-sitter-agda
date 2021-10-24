@@ -1,6 +1,6 @@
-==================
+================================================================================
 module
-==================
+================================================================================
 
 module Strict where
 
@@ -26,91 +26,224 @@ module _ {ℓ ℓ′ : Level} {A : Set ℓ} {B : Set ℓ′} where
   seq-≡ : (a : A) (b : B) → seq a b ≡ b
   seq-≡ a b = force-≡ a (λ _ → b)
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (module (module_name))
-    (open (module_name))
-    (open (module_name))
-    (open (module_name)
-        (import_directive
-            (renaming (id) (id))
-            (renaming (id) (id)))
-        (import_directive))
-    (comment)
-    (module
-        (module_name)
-        (typed_binding (atom (qid)) (atom (qid)) (expr (atom (qid))))
-        (typed_binding (atom (qid))                         (expr (atom) (atom (qid))))
-        (typed_binding (atom (qid))                         (expr (atom) (atom (qid))))
-        (function
-            (lhs (function_name (atom (qid))))
-            (rhs (expr
-                    (atom (qid))
-                    (expr
-                        (atom (expr
-                            (atom (qid))
-                            (expr (atom (qid)))))
-                        (expr (atom (qid)))))))
-        (function
-            (lhs (atom (qid)))
-            (rhs (expr (atom (qid)))))
-        (function
-            (lhs (function_name (atom (qid))))
-            (rhs (expr
-                (typed_binding
-                    (atom (qid))
-                    (expr (atom (qid))))
-                (typed_binding
-                    (atom (qid))
-                    (expr
-                        (atom (qid))
-                        (expr (atom (qid)))))
+  (module
+    (module_name))
+  (open
+    (import
+      (module_name)))
+  (open
+    (import
+      (module_name)))
+  (open
+    (import
+      (module_name))
+    (import_directive
+      (renaming
+        (id)
+        (id))
+      (renaming
+        (id)
+        (id)))
+    (import_directive))
+  (comment)
+  (module
+    (module_name)
+    (typed_binding
+      (atom
+        (qid))
+      (atom
+        (qid))
+      (expr
+        (atom
+          (qid))))
+    (typed_binding
+      (atom
+        (qid))
+      (expr
+        (atom
+          (SetN
+            (atom
+              (qid))))))
+    (typed_binding
+      (atom
+        (qid))
+      (expr
+        (atom
+          (SetN
+            (atom
+              (qid))))))
+    (function
+      (lhs
+        (function_name
+          (atom
+            (qid))))
+      (rhs
+        (expr
+          (atom
+            (qid))
+          (ARROW)
+          (expr
+            (atom
+              (expr
+                (atom
+                  (qid))
+                (ARROW)
                 (expr
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))))))
-        (function
-            (lhs (atom (qid)))
-            (rhs (expr (atom (qid)))))
-        (function
-            (lhs (function_name (atom (qid))))
-            (rhs (expr
-                (atom (qid)) (expr
-                    (atom (qid))
-                    (expr (atom (qid)))))))
-        (function
-            (lhs (atom (qid)) (atom (qid)) (atom (qid)))
-            (rhs (expr
-                (atom (qid))
-                (atom (qid))
-                (atom (expr (lambda
-                    (untyped_binding (bid))
-                    (expr (atom (qid)))))))))
-        (function
-            (lhs (function_name (atom (qid))))
-            (rhs (expr
-                (typed_binding
-                    (atom (qid))
-                    (expr (atom (qid))))
-                (typed_binding
-                    (atom (qid))
-                    (expr
-                        (atom (qid))))
+                  (atom
+                    (qid)))))
+            (ARROW)
+            (expr
+              (atom
+                (qid)))))))
+    (function
+      (lhs
+        (atom
+          (qid)))
+      (rhs
+        (expr
+          (atom
+            (qid)))))
+    (function
+      (lhs
+        (function_name
+          (atom
+            (qid))))
+      (rhs
+        (expr
+          (typed_binding
+            (atom
+              (qid))
+            (expr
+              (atom
+                (qid))))
+          (typed_binding
+            (atom
+              (qid))
+            (expr
+              (atom
+                (qid))
+              (ARROW)
+              (expr
+                (atom
+                  (qid)))))
+          (ARROW)
+          (expr
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))))))
+    (function
+      (lhs
+        (atom
+          (qid)))
+      (rhs
+        (expr
+          (atom
+            (qid)))))
+    (function
+      (lhs
+        (function_name
+          (atom
+            (qid))))
+      (rhs
+        (expr
+          (atom
+            (qid))
+          (ARROW)
+          (expr
+            (atom
+              (qid))
+            (ARROW)
+            (expr
+              (atom
+                (qid)))))))
+    (function
+      (lhs
+        (atom
+          (qid))
+        (atom
+          (qid))
+        (atom
+          (qid)))
+      (rhs
+        (expr
+          (atom
+            (qid))
+          (atom
+            (qid))
+          (atom
+            (expr
+              (lambda
+                (LAMBDA)
+                (untyped_binding
+                  (bid))
+                (ARROW)
                 (expr
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))
-                    (atom (qid))))))
-        (function
-            (lhs (atom (qid)) (atom (qid)) (atom (qid)))
-            (rhs (expr
-            (atom (qid))
-            (atom (qid))
-            (atom (expr (lambda
-            (untyped_binding (bid))
-            (expr (atom (qid)))))))))))
+                  (atom
+                    (qid)))))))))
+    (function
+      (lhs
+        (function_name
+          (atom
+            (qid))))
+      (rhs
+        (expr
+          (typed_binding
+            (atom
+              (qid))
+            (expr
+              (atom
+                (qid))))
+          (typed_binding
+            (atom
+              (qid))
+            (expr
+              (atom
+                (qid))))
+          (ARROW)
+          (expr
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))
+            (atom
+              (qid))))))
+    (function
+      (lhs
+        (atom
+          (qid))
+        (atom
+          (qid))
+        (atom
+          (qid)))
+      (rhs
+        (expr
+          (atom
+            (qid))
+          (atom
+            (qid))
+          (atom
+            (expr
+              (lambda
+                (LAMBDA)
+                (untyped_binding
+                  (bid))
+                (ARROW)
+                (expr
+                  (atom
+                    (qid)))))))))))

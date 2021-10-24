@@ -11,6 +11,6 @@ primitive
   (primitive
     (type_signature
       (field_name)
-      (expr (atom (qid)) (expr (atom (qid)))))
+      (expr (atom (qid)) (ARROW) (expr (atom (qid)))))
   )
 )

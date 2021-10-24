@@ -1,6 +1,6 @@
-==================
+================================================================================
 module
-==================
+================================================================================
 
 module Level where
 
@@ -19,36 +19,63 @@ record Lift {a ℓ} (A : Set a) : Set (a ⊔ ℓ) where
 
 open Lift public
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (module (module_name))
-    (comment)
-    (open (module_name)
-        (import_directive)
-        (import_directive (id) (id))
-        (import_directive
-            (renaming (id) (id))
-            (renaming (id) (id))))
-    (comment)
-    (record (record_name (qid))
-        (untyped_binding
-            (atom (qid))
-            (atom (qid)))
-        (typed_binding
-            (atom (qid))
+  (module
+    (module_name))
+  (comment)
+  (open
+    (import
+      (module_name))
+    (import_directive)
+    (import_directive
+      (id)
+      (id))
+    (import_directive
+      (renaming
+        (id)
+        (id))
+      (renaming
+        (id)
+        (id))))
+  (comment)
+  (record
+    (record_name
+      (qid))
+    (untyped_binding
+      (atom
+        (qid))
+      (atom
+        (qid)))
+    (typed_binding
+      (atom
+        (qid))
+      (expr
+        (atom
+          (SetN
+            (atom
+              (qid))))))
+    (expr
+      (atom
+        (SetN
+          (atom
             (expr
-                (atom)
-                (atom (qid))))
-        (expr
-            (atom)
-            (atom (expr
-                (atom (qid))
-                (atom (qid))
-                (atom (qid)))))
-        (record_declarations_block
-            (record_constructor (id))
-            (fields
-                (signature (field_name) (expr (atom (qid)))))))
-    (open (module_name)
-        (import_directive)))
+              (atom
+                (qid))
+              (atom
+                (qid))
+              (atom
+                (qid)))))))
+    (record_declarations_block
+      (record_constructor
+        (id))
+      (fields
+        (signature
+          (field_name)
+          (expr
+            (atom
+              (qid)))))))
+  (open
+    (module_name)
+    (import_directive)))

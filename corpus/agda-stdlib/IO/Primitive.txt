@@ -1,6 +1,6 @@
-==================
+================================================================================
 IO monad
-==================
+================================================================================
 
 open import Agda.Builtin.IO public using (IO)
 
@@ -16,52 +16,104 @@ postulate
 {-# COMPILE UHC _>>=_  = \_ _ _ _ x y -> UHC.Agda.Builtins.primBind x y #-}
 
 
----
+--------------------------------------------------------------------------------
 
 (source_file
-    (open (module_name)
-        (import_directive)
-        (import_directive (id)))
-    (infix (integer) (bid))
-    (postulate
-        (function
-            (lhs (function_name (atom (qid))))
-            (rhs (expr
-                (forall
-                    (untyped_binding (atom (qid)))
-                    (typed_binding
-                        (atom (qid))
-                        (expr (atom) (atom (qid))))
+  (open
+    (import
+      (module_name))
+    (import_directive)
+    (import_directive
+      (id)))
+  (infix
+    (integer)
+    (bid))
+  (postulate
+    (function
+      (lhs
+        (function_name
+          (atom
+            (qid))))
+      (rhs
+        (expr
+          (forall
+            (FORALL)
+            (untyped_binding
+              (atom
+                (qid)))
+            (typed_binding
+              (atom
+                (qid))
+              (expr
+                (atom
+                  (SetN
+                    (atom
+                      (qid))))))
+            (ARROW)
+            (expr
+              (atom
+                (qid))
+              (ARROW)
+              (expr
+                (atom
+                  (qid))
+                (atom
+                  (qid))))))))
+    (function
+      (lhs
+        (function_name
+          (atom
+            (qid))))
+      (rhs
+        (expr
+          (forall
+            (FORALL)
+            (untyped_binding
+              (atom
+                (qid))
+              (atom
+                (qid)))
+            (typed_binding
+              (atom
+                (qid))
+              (expr
+                (atom
+                  (SetN
+                    (atom
+                      (qid))))))
+            (typed_binding
+              (atom
+                (qid))
+              (expr
+                (atom
+                  (SetN
+                    (atom
+                      (qid))))))
+            (ARROW)
+            (expr
+              (atom
+                (qid))
+              (atom
+                (qid))
+              (ARROW)
+              (expr
+                (atom
+                  (expr
+                    (atom
+                      (qid))
+                    (ARROW)
                     (expr
-                        (atom (qid))
-                        (expr
-                            (atom (qid))
-                            (atom (qid))))))))
-        (function
-            (lhs (function_name (atom (qid))))
-            (rhs (expr
-                (forall
-                    (untyped_binding
-                        (atom (qid))
-                        (atom (qid)))
-                    (typed_binding
-                        (atom (qid))
-                        (expr (atom) (atom (qid))))
-                    (typed_binding
-                        (atom (qid))
-                        (expr (atom) (atom (qid))))
-                    (expr (atom (qid))
-                        (atom (qid))
-                        (expr
-                            (atom (expr
-                                (atom (qid))
-                                (expr
-                                    (atom (qid))
-                                    (atom (qid)))))
-                            (expr
-                                (atom (qid))
-                                (atom (qid))))))))))
-    (pragma)
-    (pragma)
-    (pragma)
-    (pragma))
+                      (atom
+                        (qid))
+                      (atom
+                        (qid)))))
+                (ARROW)
+                (expr
+                  (atom
+                    (qid))
+                  (atom
+                    (qid))))))))))
+  (pragma)
+  (pragma)
+  (pragma)
+  (pragma))
